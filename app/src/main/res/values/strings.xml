@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">QuizList</string>
+    <string name="exit">Exit</string>
+    <string name="deepak_chourasiya">Deepak Chourasiya</string>
+    <string name="oops_time_out">Oops! Time Out...</string>
+    <string name="try_again">Try Again</string>
+    <string name="developed_by_deepak_chourasiya">Developed By : Deepak Chourasiya</string>
+    <string name="share_your_score">Share Your Score</string>
+</resources>

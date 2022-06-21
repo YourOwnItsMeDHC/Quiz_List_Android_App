@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_quiz"
+    tools:context=".WonActivity">
+
+    <!--    Toolbar : -->
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:background="#E3955C">
+
+
+        <ImageView
+            android:onClick="wonBack"
+            android:id="@+id/ic_back"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_10sdp"
+            app:srcCompat="@drawable/ic_back"
+            app:tint="@color/text_color" />
+
+        <TextView
+            android:onClick="wonExit"
+            android:id="@+id/ic_exit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:text="Restart"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/_18sdp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+<!--    Score Progress Bar-->
+    <RelativeLayout
+        android:id="@+id/rl2"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_width="@dimen/_170sdp"
+        android:layout_height="@dimen/_170sdp"
+        android:layout_centerHorizontal="true">
+
+        <com.mikhaellopez.circularprogressbar.CircularProgressBar
+            android:id="@+id/circularProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cpb_background_progressbar_color="@color/red"
+            app:cpb_background_progressbar_width="@dimen/_10sdp"
+            app:cpb_progress_direction="to_right"
+            app:cpb_progressbar_color="@color/green"
+            app:cpb_progressbar_width="10dp"
+            app:cpb_progress_max="10"
+            app:cpb_round_border="false" />
+
+        <TextView
+            android:id="@+id/resultText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/purple_700"
+            android:textSize="@dimen/_30sdp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+<!--    Score Sharing Button : -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_below="@id/rl2"
+        android:layout_marginTop="@dimen/_10sdp">
+
+        <LinearLayout
+            android:id="@+id/btnShare"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="@dimen/_40sdp"
+            android:layout_marginEnd="@dimen/_40sdp"
+            android:background="@drawable/share_shape"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/share_your_score"
+                android:textColor="@color/purple_700"
+                android:textSize="@dimen/_20sdp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_40sdp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_150sdp"
+            android:background="@drawable/congratulations"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

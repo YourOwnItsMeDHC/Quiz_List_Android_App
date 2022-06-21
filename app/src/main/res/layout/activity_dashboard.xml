@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_quiz"
+    android:orientation="vertical"
+    tools:context=".DashboardActivity">
+
+    <!--    Toolbar : -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:background="#E3955C">
+
+
+        <ImageView
+            android:id="@+id/ic_back"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_10sdp"
+            app:srcCompat="@drawable/ic_back"
+            app:tint="@color/text_color" />
+
+        <TextView
+            android:id="@+id/ic_exit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:text="Refresh"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/_18sdp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+
+    <!--Horizontal Progress Bar in each question page-->
+    <ProgressBar
+        android:id="@+id/quiz_timer"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_10sdp"
+        android:indeterminate="false"
+        android:maxHeight="@dimen/_10sdp"
+        android:minHeight="12dp"
+        android:progress="25"
+        android:max="50"
+        android:background="@color/primary_quiz"
+        android:progressTint="@color/purple_500"/>
+
+
+
+    <!--    Create 5 cards (One for Question & 4 for options-->
+    <!--    Question Card-->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_100sdp"
+        android:layout_marginStart="@dimen/_7sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_7sdp"
+        app:cardCornerRadius="@dimen/_20sdp"
+        app:cardBackgroundColor="#E4E1E2">
+
+        <TextView
+            android:id="@+id/tv_question"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/deepak_chourasiya"
+            android:textColor="@color/text_color"
+            android:layout_margin="@dimen/_10sdp"/>
+    </androidx.cardview.widget.CardView>
+
+    <!--    Option A-->
+    <androidx.cardview.widget.CardView
+        android:onClick="OptionAClick"
+        android:id="@+id/cardA"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        app:cardBackgroundColor="#E4E1E2"
+        app:cardCornerRadius="@dimen/_10sdp">
+
+        <TextView
+            android:id="@+id/tv_optiona"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/deepak_chourasiya"
+            android:textColor="@color/text_color" />
+    </androidx.cardview.widget.CardView>
+
+    <!--    Option B-->
+    <androidx.cardview.widget.CardView
+        android:onClick="OptionBClick"
+        android:id="@+id/cardB"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        app:cardCornerRadius="@dimen/_10sdp"
+        app:cardBackgroundColor="#E4E1E2">
+
+        <TextView
+            android:id="@+id/tv_optionb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/deepak_chourasiya"
+            android:textColor="@color/text_color" />
+    </androidx.cardview.widget.CardView>
+
+    <!--    Option C-->
+    <androidx.cardview.widget.CardView
+        android:onClick="OptionCClick"
+        android:id="@+id/cardC"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        app:cardCornerRadius="@dimen/_10sdp"
+        app:cardBackgroundColor="#E4E1E2">
+
+        <TextView
+            android:id="@+id/tv_optionc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/deepak_chourasiya"
+            android:textColor="@color/text_color" />
+    </androidx.cardview.widget.CardView>
+
+    <!--    Option D-->
+    <androidx.cardview.widget.CardView
+        android:onClick="OptionDClick"
+        android:id="@+id/cardD"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        app:cardCornerRadius="@dimen/_10sdp"
+        app:cardBackgroundColor="#E4E1E2">
+
+        <TextView
+            android:id="@+id/tv_optiond"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/deepak_chourasiya"
+            android:textColor="@color/text_color" />
+    </androidx.cardview.widget.CardView>
+
+
+    <!--    Next Button-->
+    <LinearLayout
+        android:id="@+id/nextBtn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_marginStart="@dimen/_35sdp"
+        android:layout_marginTop="@dimen/_50sdp"
+        android:layout_marginEnd="@dimen/_35sdp"
+        android:background="@drawable/next_btn_shape"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Next"
+            android:textAllCaps="true"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/_20sdp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</LinearLayout>
