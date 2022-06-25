@@ -17,3 +17,8 @@ And, if you think that you have scored well , then you can also share your achie
 
 https://user-images.githubusercontent.com/95961231/174810929-f4c0b903-3ff4-418b-ac43-467fdfcc74b0.mp4
 
+
+<h2> 1 Minute Video : </h2>
+
+https://user-images.githubusercontent.com/95961231/175767791-5c8aaac0-f9c7-4d14-ad54-aeea302c2b9a.mp4
+
